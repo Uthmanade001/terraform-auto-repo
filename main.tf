@@ -16,7 +16,7 @@ provider "github" {
 
 # Create a new public repo with auto-generated README
 resource "github_repository" "demo_repo" {
-  name        = "terraform-another-repo"
+  name        = "terraform-new-repo"
   description = "This repository was created automatically using Terraform and GitHub Actions 🚀"
   visibility  = "public"
   auto_init   = true
