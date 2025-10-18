@@ -30,13 +30,13 @@ jobs:
         run: terraform init
 
       - name: Terraform Apply
-        if: ${{ github.event.input.tf_action == "apply" }}
+        if: ${{ github.event.input.tf_action == 'apply' }}
         env:
           TF_VAR_github_token: ${{ secrets.PAT }}
         run: terraform apply -auto-approve
 
       - name: Terraform destroy
-        if: ${{ github.event.input.tf_action == "destroy" }}
+        if: ${{ github.event.input.tf_action == 'destroy' }}
         env:
           TF_VAR_github_token: ${{ secrets.PAT }}
         run: terraform destroy -auto-approve
